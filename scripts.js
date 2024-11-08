@@ -87,7 +87,8 @@ products.forEach((product) => {
 // PROCESS:
 // destructered products object for current product with initial value of an empty string
 // returned accumulator with product names as one string
-console.log(`
+console.log(`    
+    Product names as single string:
     ${
         products.reduce((accumulator, { product }) => {
             return accumulator + product
