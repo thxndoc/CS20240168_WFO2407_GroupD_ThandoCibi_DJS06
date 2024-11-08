@@ -83,6 +83,17 @@ products.forEach((product) => {
 // PROCESS:
 //
  
+// 4. Use `reduce` to concatenate all product names into a single string.
+// PROCESS:
+// destructered products object for current product with initial value of an empty string
+// returned accumulator with product names as one string
+console.log(`
+    ${
+        products.reduce((accumulator, { product }) => {
+            return accumulator + product
+        }, "")
+    }
+`)
 
 // 6. Using `Object.entries` and `reduce`, 
 // recreate the products object with keys 'name' and 'cost', maintaining their original values.
