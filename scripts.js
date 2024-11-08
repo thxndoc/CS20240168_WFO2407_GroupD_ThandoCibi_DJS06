@@ -82,3 +82,19 @@ products.forEach((product) => {
 //and calculate the total price using `reduce`.
 // PROCESS:
 //
+ 
+
+// 6. Using `Object.entries` and `reduce`, 
+// recreate the products object with keys 'name' and 'cost', maintaining their original values.
+// PROCESS:
+// destructered products object for current product with initial value of an empty array
+// created a new object and pushed it to the accumulator array, and returned the accumulator 
+// Added JSON.stringify to convert to string because console result would be [object Object]
+console.log(`
+    ${JSON.stringify(
+    products.reduce(( accumulator, { product, price }) => {
+        accumulator.push({ name: product, cost: price });
+        return  accumulator;
+    }, [])
+    )}
+`);
