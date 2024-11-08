@@ -96,6 +96,30 @@ console.log(`
     }
 `)
 
+// 5. Identify the highest and lowest-priced items, returning a string formatted as "Highest: X. Lowest: Y."
+// PROCESS:
+// as `reduce` iterates through the array, the ternary operator makes sure that 
+// the highest-priced product is always returned as the highest value and same for the lowest value
+console.log(`
+    Highest: 
+    ${
+        JSON.stringify
+        (products.reduce((highest, current) => {
+        return parseFloat(current.price) > parseFloat(highest.price) ? current : highest;
+        })
+    )}
+`);
+
+console.log(`
+    Lowest: 
+    ${
+        JSON.stringify
+        (products.reduce((lowest, current) => {
+        return parseFloat(current.price) < parseFloat(lowest.price) ? current : lowest;
+        })
+    )}
+`);
+
 // 6. Using `Object.entries` and `reduce`, 
 // recreate the products object with keys 'name' and 'cost', maintaining their original values.
 // PROCESS:
