@@ -2,7 +2,7 @@
 const provinces = ['Western Cape', 'Gauteng', 'Northern Cape', 'Eastern Cape', 'KwaZulu-Natal', 'Free State']
 
 // A list of names:
-const names = ['Ashwin', 'Sibongile', 'Jan-Hendrik', 'Sifso', 'Shailen', 'Frikkie']
+const names = ['Ashwin', 'Sibongile', 'Jan-Hendrik', 'Sifiso', 'Shailen', 'Frikkie']
 
 // A list of products with prices:
 const products = [
@@ -13,3 +13,14 @@ const products = [
   { product: 'coffee', price: 10 },
   { product: 'tea', price: '' },
 ]
+// 1. Use `forEach` to log each name and each province to the console
+provinces.forEach((province) => console.log(province));
+
+names.forEach((name) => console.log(name));
+
+// get name and province based on index
+function getNameAndProvince(name, index) {
+  console.log(`${name} (${provinces[index]})`); 
+}
+
+names.forEach(getNameAndProvince);
