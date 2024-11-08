@@ -64,5 +64,15 @@ console.log(nameAndProvinceObject);
 // each product property of the current object being iterated over ${object.property}
 products.forEach((product) => {
   console.log(`Product: ${product.product}`);
-  }
-);
+});
+
+// 2. Filter out products with names longer than 5 characters.
+// `filter` returned [object Object] in the console log, 
+// which is a representation of the object so by chaining map to the filter method, 
+// I was able to extract the filtered results as a string
+// note: filter returns the entire object, so JSON.stringify would show the whole object
+const namesLessThanFiveCharacters = 
+  products.filter((product) => product.product.length <= 5)
+  .map((product) => product.product);
+
+console.log(`Names longer than 5 characters: ${namesLessThanFiveCharacters}`)
