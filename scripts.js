@@ -28,3 +28,7 @@ names.forEach(getNameAndProvince);
 // 2. Use `map` to create a new array of province names in all uppercase and log to console
 const provincesInUppercase = provinces.map((province) => province.toUpperCase());
 console.log(provincesInUppercase);
+
+// 3. Create new array using `map` that contains the length of each name
+const lengthOfEachName = names.map((name) => name.length);
+console.log(lengthOfEachName);
