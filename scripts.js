@@ -81,8 +81,17 @@ products.forEach((product) => {
 // 3. Filter out products without prices, convert string prices to numbers, 
 //and calculate the total price using `reduce`.
 // PROCESS:
-//
- 
+// filtered out objects whose products don't have valid prices e.g empty string
+// used `parseFloat` to turn strings to numbers
+console.log(`
+    Total Price: 
+    ${ 
+        JSON.stringify
+       (products.filter((product) => product.price && !isNaN(parseFloat(product.price)))
+       .reduce((total, { price }) => total + parseFloat(price), 0)
+    )}
+`);
+
 // 4. Use `reduce` to concatenate all product names into a single string.
 // PROCESS:
 // destructered products object for current product with initial value of an empty string
@@ -100,6 +109,7 @@ console.log(`
 // PROCESS:
 // as `reduce` iterates through the array, the ternary operator makes sure that 
 // the highest-priced product is always returned as the highest value and same for the lowest value
+// I struggled to combine the logic so the output is one result 🥲
 console.log(`
     Highest: 
     ${
