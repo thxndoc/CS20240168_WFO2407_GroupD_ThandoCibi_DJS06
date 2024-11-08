@@ -13,6 +13,9 @@ const products = [
   { product: 'coffee', price: 10 },
   { product: 'tea', price: '' },
 ]
+
+// EXERCIES: ——————————————————————————————————————————
+
 // 1. Use `forEach` to log each name and each province to the console
 provinces.forEach((province) => console.log(province));
 
@@ -53,3 +56,13 @@ const nameAndProvinceObject = names.reduce((map, name, index) => {
 }, {});
 
 console.log(nameAndProvinceObject);
+
+// ADVANCED EXERCIES: ——————————————————————————————————————————
+
+// 1. Iterate over the products array, logging each product name.
+// I used the `forEach` method to iterate over the products array and console log 
+// each product property of the current object being iterated over ${object.property}
+products.forEach((product) => {
+  console.log(`Product: ${product.product}`);
+  }
+);
