@@ -67,12 +67,18 @@ products.forEach((product) => {
 });
 
 // 2. Filter out (remove) products with names longer than 5 characters.
+// PROCESS:
 // `filter` returned [object Object] in the console log, 
 // which is a representation of the object so by chaining map to the filter method, 
 // I was able to extract the results as a string
 // note: filter returns the entire object, so JSON.stringify would show the whole object
-const namesLessThanFiveCharacters = 
-  products.filter((product) => product.product.length <= 5)
-  .map((product) => product.product);
+  console.log(`Names longer than 5 characters: 
+  ${
+    products.filter((product) => product.product.length <= 5)
+    .map((product) => product.product)
+  }`);
 
-console.log(`Names longer than 5 characters: ${namesLessThanFiveCharacters}`)
+// 3. Filter out products without prices, convert string prices to numbers, 
+//and calculate the total price using `reduce`.
+// PROCESS:
+//
